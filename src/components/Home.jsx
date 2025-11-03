@@ -119,7 +119,7 @@ const Home = () => {
         </a>
       </div>
 
-      <div className="mt-[15vh]  leading-none justify-center flex-col items-center flex text-[#533116]">
+      <div className="sm:mt-[15vh] mt-[12vh]  leading-none justify-center flex-col items-center flex text-[#533116]">
         <div className="maintext font-[one] ">
           <div className="lhr text-[6vw] sm:text-[4vw] ">LAHORE</div>
           <div className="text-[12vw] sm:text-[8vw] ">CHAPTER</div>
