@@ -46,50 +46,54 @@ const Home = () => {
       },
     });
 
-     const mm = gsap.matchMedia();
-    mm.add("(min-width: 1000px) and (max-width: 1500px)", () => {
-      gsap.to(layerRef.current, {
-      scrollTrigger: {
-        trigger: layerRef.current,
-        start: "top 75%",
-        end: "+=600",
-        scrub: false,
-        pin: true,
-      },
-    });
-    mm.add("(min-width: 1000px) and (max-width: 1500px)", () => {
-      gsap.to(layerReff.current, {
-      scrollTrigger: {
-        trigger: layerReff.current,
-        start: "top 80%",
-        end: "+=600",
-        scrub: false,
-        pin: true,
-        markers:true
-      },
-    }); 
+const mm = gsap.matchMedia();
 
-    mm.add("(min-width: 200px) and (max-width: 500px)", () => {
-      gsap.to(layerRef.current, {
-      scrollTrigger: {
-        trigger: layerRef.current,
-        start: "top 85%",
-        end: "+=600",
-        scrub: false,
-        pin: true,
-      },
-    });
-    mm.add("(min-width: 200px) and (max-width: 500px)", () => {
-      gsap.to(layerReff.current, {
-      scrollTrigger: {
-        trigger: layerReff.current,
-        start: "top 90%",
-        end: "+=600",
-        scrub: false,
-        pin: true,
-        markers:true
-      },
-    });   });   }); 
+// Large screens (1000px–1500px)
+mm.add("(min-width: 1000px) and (max-width: 1500px)", () => {
+  gsap.to(layerRef.current, {
+    scrollTrigger: {
+      trigger: layerRef.current,
+      start: "top 75%",
+      end: "+=600",
+      scrub: false,
+      pin: true,
+    },
+  });
+
+  gsap.to(layerReff.current, {
+    scrollTrigger: {
+      trigger: layerReff.current,
+      start: "top 80%",
+      end: "+=600",
+      scrub: false,
+      pin: true,
+    },
+  });
+});
+
+// Small screens (200px–500px)
+mm.add("(min-width: 200px) and (max-width: 500px)", () => {
+  gsap.to(layerRef.current, {
+    scrollTrigger: {
+      trigger: layerRef.current,
+      start: "top 80%",
+      end: "+=120",
+      scrub: false,
+      pin: true,
+    },
+  });
+
+  gsap.to(layerReff.current, {
+    scrollTrigger: {
+      trigger: layerReff.current,
+      start: "top 85%",
+      end: "+=120",
+      scrub: false,
+      pin: true,
+      markers: true,
+    },
+  });
+});
 
     // gsap.to(layerRef.current, {
     //   scrollTrigger: {
@@ -112,7 +116,6 @@ const Home = () => {
     // });
   });
 
-     }); });
 
   
 
@@ -120,7 +123,7 @@ const Home = () => {
     <div className=" h-screen w-screen">
 
 
-      <div className="nav font-[two2] text-[#784b29]  flex justify-between items-center sm:px-10 px-5 py-3 text-[2.5vw] sm:text-[1.7vw]">
+      <div className="nav font-[two2] text-[#784b29]  flex justify-between items-center lg:px-10 px-5 py-3 text-[2.5vw] lg:text-[1.7vw]">
        
         <a
           href="https://maps.app.goo.gl/Bno2QXkkedsYawqC8?g_st=aw"
@@ -141,17 +144,17 @@ const Home = () => {
         </a>
       </div>
 
-      <div className="sm:mt-[15vh] mt-[12vh]  leading-none justify-center flex-col items-center flex text-[#533116]">
+      <div className="sm:mt-[15vh] md:mt-[10vh]   lg:mt-[15vh] mt-[10vh]  leading-none justify-center flex-col items-center flex text-[#533116]">
         <div className="maintext font-[one] ">
-          <div className="lhr text-[6vw] sm:text-[4vw] ">LAHORE</div>
-          <div className="text-[12vw] sm:text-[8vw] ">CHAPTER</div>
-          <div className="flex one sm:-mt-5 -mt-2 ">
+          <div className="lhr text-[6vw] lg:text-[4vw] ">LAHORE</div>
+          <div className="text-[12vw] lg:text-[8vw] ">CHAPTER</div>
+          <div className="flex one lg:-mt-5 -mt-2 ">
             <img
-              className="sm:w-[6vw] w-[10vw] h-[6vh] sm:h-auto bean text-[#533116]"
+              className="md:w-[8vw] w-[10vw] md:h-[11vw] lg:h-[8vw] h-[6vh] bean -mr-1 text-[#533116]"
               src="/images/bean.png"
               alt=""
             />
-            <div className="text-[12vw] sm:text-[8vw]"> NE</div>
+            <div className="text-[12vw] lg:text-[8vw]"> NE</div>
           </div>
         </div>
         <svg
@@ -183,15 +186,15 @@ const Home = () => {
 
         <div className="z-1">
           <img
-            className="sm:w-[45vw] w-[70vw]  rounded-4xl"
+            className="lg:w-[45vw] w-[70vw]  rounded-4xl"
             src="/images/mainpic.png"
             alt=""
           />
-          <div className="flex flex-col justify-center items-center sm:w-[45vw] w-[70vw] rounded-4xl bg-[#bed9eb]">
-            <div className="sm:text-[2.5vw] text-[5vw] font-[two]  pt-4 uppercase">Opening Hours</div>
+          <div className="flex flex-col justify-center items-center lg:w-[45vw] w-[70vw] rounded-4xl bg-[#bed9eb]">
+            <div className="lg:text-[2.5vw] text-[5vw] font-[two]  pt-4 uppercase">Opening Hours</div>
             <div className="flex justify-center items-center gap-10 p-4">
-              <div className="sm:text-[3.5vw] text-[4.5vw] font-[one]  uppercase">MON - SUN</div>
-              <div className="sm:text-[2.5vw] text-[4.5vw] font-[two]   uppercase">9am - 2am</div>
+              <div className="lg:text-[3.5vw] text-[4.5vw] font-[one]  uppercase">MON - SUN</div>
+              <div className="lg:text-[2.5vw] text-[4.5vw] font-[two]   uppercase">9am - 2am</div>
             </div>
           </div>
           <div></div>

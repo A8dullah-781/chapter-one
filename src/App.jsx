@@ -1,14 +1,32 @@
 import React from "react";
 import Loading from "./components/Home";
 import gsap from "gsap";
-import react, { useRef } from "react";
+import react, { useRef, useEffect } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+import LocomotiveScroll from 'locomotive-scroll';
 import { useGSAP } from "@gsap/react";
 import Home from "./components/Home";
 import Blank from "./components/Blank";
 import MenuOne from "./components/MenuOne";
+import MenuTwo from "./components/MenuTwo";
 
 const App = () => {
+
+  useEffect(() => {
+    const scroll = new LocomotiveScroll({
+      el: document.querySelector('.main'),
+      smooth: true,
+      multiplier: 1,
+      lerp: 0.5
+    });
+
+    return () => {
+      scroll.destroy(); 
+    };
+  }, []);
+
+
   useGSAP(() => {
     gsap.to(".white", {
       delay: 0.3,
@@ -18,6 +36,8 @@ const App = () => {
       ease: "expo.inOut",
     });
   });
+
+
 
   return (
     <div className="h-screen w-screen">
@@ -40,6 +60,7 @@ const App = () => {
       <Home />
       <Blank />
       <MenuOne />
+      <MenuTwo/>
     </div>
   );
 };
