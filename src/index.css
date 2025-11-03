@@ -1,0 +1,17 @@
+@import "tailwindcss";
+body{
+    overflow-x: hidden;
+}
+
+@font-face {
+    font-family: "one";
+    src: url("/fonts/kaaaio.woff2") format("truetype");
+}
+@font-face {
+    font-family: "two";
+    src: url("/fonts/lapibold.woff2") format("truetype");
+}
+@font-face {
+    font-family: "two2";
+    src: url("/fonts/lapiok.woff2") format("truetype");
+}
