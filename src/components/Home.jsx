@@ -69,6 +69,28 @@ const Home = () => {
       },
     }); 
 
+    mm.add("(min-width: 200px) and (max-width: 500px)", () => {
+      gsap.to(layerRef.current, {
+      scrollTrigger: {
+        trigger: layerRef.current,
+        start: "top 85%",
+        end: "+=600",
+        scrub: false,
+        pin: true,
+      },
+    });
+    mm.add("(min-width: 200px) and (max-width: 500px)", () => {
+      gsap.to(layerReff.current, {
+      scrollTrigger: {
+        trigger: layerReff.current,
+        start: "top 90%",
+        end: "+=600",
+        scrub: false,
+        pin: true,
+        markers:true
+      },
+    });   });   }); 
+
     // gsap.to(layerRef.current, {
     //   scrollTrigger: {
     //     trigger: layerRef.current,
@@ -136,7 +158,7 @@ const Home = () => {
           ref={layerRef}
           viewBox="0 0 1200 120"
           preserveAspectRatio="none"
-          className="absolute lehar bottom-0 left-0 w-full sm:h-[35vh] md:h-[25vh] h-[15vh] "
+          className="absolute lehar bottom-0 left-0 w-full sm:h-[37vh] md:h-[25vh] h-[15vh] "
         >
           <path
             id="wavePath"
@@ -149,7 +171,7 @@ const Home = () => {
           ref={layerReff}
           viewBox="0 0 1200 120"
           preserveAspectRatio="none"
-          className="absolute lehar bottom-0 left-0 w-full sm:h-[30vh] md:h-[20vh] h-[12vh] "
+          className="absolute lehar bottom-0 left-0 w-full sm:h-[32vh] md:h-[20vh] h-[12vh] "
         >
           <path
             id="wavePath"

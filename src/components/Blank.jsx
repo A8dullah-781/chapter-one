@@ -1,9 +1,9 @@
 import React from 'react'
 
-const blankspace = () => {
+const Blank = () => {
   return (
-    <div className='sm:h-[100vh] -mt-1 h-0 bg-[]'></div>
+    <div  className='sm:h-[100vh] -mt-1 h-0 bg-[]'></div>
   )
 }
 
-export default blankspace
+export default Blank
