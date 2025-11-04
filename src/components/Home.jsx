@@ -72,12 +72,12 @@ mm.add("(min-width: 1000px) and (max-width: 1500px)", () => {
 });
 
 // Small screens (200px–500px)
-mm.add("(min-width: 200px) and (max-width: 500px)", () => {
+mm.add("(min-width: 200px) and (max-width: 400px)", () => {
   gsap.to(layerRef.current, {
     scrollTrigger: {
       trigger: layerRef.current,
-      start: "top 80%",
-      end: "+=120",
+      start: "top 85%",
+      end: "+=10",
       scrub: false,
       pin: true,
     },
@@ -87,7 +87,7 @@ mm.add("(min-width: 200px) and (max-width: 500px)", () => {
     scrollTrigger: {
       trigger: layerReff.current,
       start: "top 85%",
-      end: "+=120",
+      end: "+=10",
       scrub: false,
       pin: true,
       markers: true,
