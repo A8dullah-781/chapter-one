@@ -27,6 +27,38 @@ useGSAP(() => {
       },
     });
 
+gsap.fromTo(
+  layerRef.current,
+  { y: "100%"},
+  {
+    y: "0%",
+    opacity: 1,
+ease: "bounce.out",
+    scrollTrigger: {
+      trigger: layerRef.current,
+      start: "top 80%", 
+      scrub: true,
+    },
+  }
+);
+
+gsap.fromTo(
+  layerReff.current,
+  { y: "100%" },
+  {
+    y: "0%",
+    opacity: 1,
+   ease: "bounce.out",
+    scrollTrigger: {
+      trigger: layerReff.current,
+      start: "top 80%", 
+      scrub: true,
+    },
+  }
+);
+
+
+
 // const mm = gsap.matchMedia();
 
 // // Large screens (1000px–1500px)
@@ -125,7 +157,7 @@ useGSAP(() => {
   
   return ( <div>
     
-    <div className=" h-auto justify-center flex items-center bg-[#533116]">
+    <div className=" h-auto justify-center relative flex z-10 items-center bg-[#533116]">
       <div className="bg-[#bed9eb] mb-5 h-auto flex mt-10 sm:mt-0 rounded-4xl w-[90%]">
         <div className="lg:w-1/2 w-full h-auto rounded-4xl  text-[#9b663a] "> <div></div>
 
@@ -298,7 +330,7 @@ useGSAP(() => {
     </div>
       </div>
     </div>
-     <div className="relative w-full rotate-180">
+     <div className="relative w-full  z-0 rotate-180">
        <svg
           ref={layerRef}
           viewBox="0 0 1200 120"

@@ -10,6 +10,7 @@ import Home from "./components/Home";
 import Blank from "./components/Blank";
 import MenuOne from "./components/MenuOne";
 import MenuTwo from "./components/MenuTwo";
+import About from "./components/About";
 
 const App = () => {
 
@@ -61,7 +62,7 @@ const App = () => {
       <Blank />
       <MenuOne />
       <MenuTwo/>
-      <Blank/>
+      <About/>
     </div>
   );
 };
