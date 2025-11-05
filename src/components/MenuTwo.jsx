@@ -10,10 +10,52 @@ const MenuOne = () => {
   const imagesRef = useRef([]);
 
 gsap.registerPlugin(ScrollTrigger);
-
+ const layerRef = useRef();
+  const layerReff = useRef();
+  const waveRef = useRef()
 
 
 useGSAP(() => {
+
+  gsap.to("#wavePath", {
+      duration: 2,
+      repeat: -1,
+      yoyo: true,
+      ease: "sine.inOut",
+      attr: {
+        d:  "M0 70 Q 150 20 300 60 T 600 55 T 900 65 T 1200 45 V120 H0 Z",
+      },
+    });
+
+// const mm = gsap.matchMedia();
+
+// // Large screens (1000px–1500px)
+// mm.add("(min-width: 1000px) and (max-width: 1500px)", () => {
+//   gsap.to(layerRef.current, {
+//     scrollTrigger: {
+//       trigger: layerRef.current,
+//       start: "top 75%",
+//       end: "+=600",
+//       scrub: false,
+//       pin: true,
+//       pinSpacing:false
+//     },
+//   });
+
+//   gsap.to(layerReff.current, {
+//     scrollTrigger: {
+//       trigger: layerReff.current,
+//       start: "top 80%",
+//       end: "+=600",
+//       scrub: false,
+//       pin: true,
+//       pinSpacing:false
+//     },
+//   });
+// });
+
+
+
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: sectionRef.current,
@@ -81,10 +123,11 @@ useGSAP(() => {
 
   
   
-  return (
+  return ( <div>
+    
     <div className=" h-auto justify-center flex items-center bg-[#533116]">
       <div className="bg-[#bed9eb] mb-5 h-auto flex mt-10 sm:mt-0 rounded-4xl w-[90%]">
-        <div className="lg:w-1/2 w-full h-auto rounded-4xl  text-[#9b663a] ">
+        <div className="lg:w-1/2 w-full h-auto rounded-4xl  text-[#9b663a] "> <div></div>
 
         <div className="title items-center flex flex-col">
           <div className="font-[one] text-[8vw] sm:text-[4vw] whitespace-none  border-b-1 pb-1 sm:pb-5 px-5 pt-5">MATCHA BLENDS</div>
@@ -254,6 +297,35 @@ useGSAP(() => {
       </div>
     </div>
       </div>
+    </div>
+     <div className="relative w-full rotate-180">
+       <svg
+          ref={layerRef}
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+          className="absolute lehar bottom-0 left-0 w-full sm:h-[37vh] md:h-[25vh] h-[15vh] "
+        >
+          <path
+            id="wavePath"
+            ref={waveRef}
+            d="M0 60 Q 150 40 300 60 T 600 60 T 900 60 T 1200 60 V120 H0 Z"
+            fill="#533116c0"
+          />
+        </svg>
+        <svg
+          ref={layerReff}
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+          className="absolute lehar bottom-0 left-0 w-full sm:h-[32vh] md:h-[20vh] h-[12vh] "
+        >
+          <path
+            id="wavePath"
+            ref={waveRef}
+            d="M0 60 Q 150 40 300 60 T 600 60 T 900 60 T 1200 60 V120 H0 Z"
+            fill="#533116"
+          />
+        </svg>
+     </div>
     </div>
   );
 };

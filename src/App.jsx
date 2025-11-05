@@ -53,7 +53,7 @@ const App = () => {
           <div className="white h-[10%] w-full bg-[#99633B]"></div>
           <div className="white h-[10%] w-full bg-[#784b29]"></div>
           <div className="white h-[10%] w-full bg-[#663E20]"></div>
-          <div className="white h-[10%] w-full bg-[#3E2410]"></div>
+          <div className="white h-[10%] w-full bg-[#533116]"></div>
           <div className="white h-[10%] w-full bg-[#3E2410]"></div>
         </div>
       </div>
@@ -61,6 +61,7 @@ const App = () => {
       <Blank />
       <MenuOne />
       <MenuTwo/>
+      <Blank/>
     </div>
   );
 };
