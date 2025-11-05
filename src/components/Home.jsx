@@ -158,7 +158,8 @@ mm.add("(min-width: 1000px) and (max-width: 1500px)", () => {
             <div className="text-[12vw] lg:text-[8vw]"> NE</div>
           </div>
         </div>
-        <svg
+    <div className="hidden lg:block">
+          <svg
           ref={layerRef}
           viewBox="0 0 1200 120"
           preserveAspectRatio="none"
@@ -184,6 +185,7 @@ mm.add("(min-width: 1000px) and (max-width: 1500px)", () => {
             fill="#533116"
           />
         </svg>
+    </div>
 
         <div className="z-1">
           <img

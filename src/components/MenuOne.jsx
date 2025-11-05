@@ -9,11 +9,36 @@ const MenuOne = () => {
   const sectionRef = useRef();
   const imagesRef = useRef([]);
 
+   const layerRef = useRef();
+    const layerReff = useRef();
+    const waveRef = useRef()
+  
+
 gsap.registerPlugin(ScrollTrigger);
 
 
 
 useGSAP(() => {
+   gsap.to("#wavePath1", {
+      duration: 2,
+      repeat: -1,
+      yoyo: true,
+      ease: "sine.inOut",
+      attr: {
+        d:  "M0 70 Q 150 20 300 60 T 600 55 T 900 65 T 1200 45 V120 H0 Z",
+      },
+    });
+   gsap.to("#wavePath2", {
+      duration: 2,
+      repeat: -1,
+      yoyo: true,
+      ease: "sine.inOut",
+      attr: {
+        d:  "M0 70 Q 150 20 300 60 T 600 55 T 900 65 T 1200 45 V120 H0 Z",
+      },
+    });
+
+
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: sectionRef.current,
@@ -81,8 +106,36 @@ useGSAP(() => {
 
   
   
-  return (
-    <div className=" h-auto pt-24 -mt-28 sm:mt-0  sm:pt-10 justify-center flex items-center bg-[#533116]">
+  return ( <div>
+    <div className="relative w-full lg:hidden">
+            <svg
+          ref={layerRef}
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+          className="absolute lehar bottom-0 left-0 w-full sm:h-[37vh] md:h-[25vh] h-[15vh] "
+        >
+          <path
+            id="wavePath1"
+            ref={waveRef}
+            d="M0 60 Q 150 40 300 60 T 600 60 T 900 60 T 1200 60 V120 H0 Z"
+            fill="#533116c0"
+          />
+        </svg>
+        <svg
+          ref={layerReff}
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+          className="absolute lehar bottom-0 left-0 w-full sm:h-[32vh] md:h-[20vh] h-[12vh] "
+        >
+          <path
+            id="wavePath2"
+            ref={waveRef}
+            d="M0 60 Q 150 40 300 60 T 600 60 T 900 60 T 1200 60 V120 H0 Z"
+            fill="#533116"
+          />
+        </svg>
+    </div>
+    <div className=" h-auto py-5 justify-center flex items-center bg-[#533116]">
       <div className=" bg-[#9b663a] mb-5 h-auto flex  rounded-4xl w-[90%]">
         <div className="lg:w-1/2 w-full h-auto rounded-4xl  text-[#f2e5bc] ">
 
@@ -227,6 +280,7 @@ useGSAP(() => {
       </div>
     </div>
       </div>
+    </div>
     </div>
   );
 };
