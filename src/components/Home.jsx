@@ -57,6 +57,7 @@ mm.add("(min-width: 1000px) and (max-width: 1500px)", () => {
       end: "+=600",
       scrub: false,
       pin: true,
+      pinSpacing:false
     },
   });
 
@@ -67,6 +68,7 @@ mm.add("(min-width: 1000px) and (max-width: 1500px)", () => {
       end: "+=600",
       scrub: false,
       pin: true,
+      pinSpacing:false
     },
   });
 });
