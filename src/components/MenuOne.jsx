@@ -140,123 +140,125 @@ useGSAP(() => {
         <div className="lg:w-1/2 w-full h-auto rounded-4xl  text-[#f2e5bc] ">
 
         <div className="title items-center flex flex-col">
-          <div className="font-[one] text-[8vw] sm:text-[5.5vw] px-5 pt-5">COLD BREWS</div>
-        <div className="font-[two2] text-[2.5vw] mb-2 sm:mb-0 sm:text-[1.5vw] border-b-1 pb-1 sm:pb-5 ">Served hot, on ice, and blended -- Just let your barista know</div>
+          <div className="font-[one] text-[11vw] sm:text-[5.5vw] pt-5">COLD BREWS</div>
+        <div className="font-[two2] text-[3vw] mb-2 sm:mb-0 sm:text-[1.5vw] border-b-1 pb-1 sm:pb-5 ">Served hot, on ice, and blended -- Just let your barista know</div>
         </div>
         <div className="allitems">
 
         <div className="menuitem  px-10 md:px-auto md:pl-8 ">
-            <div className=" flex flex-col items-start text-[3vw] font-[two] py-2">Espresso </div>
+            <div className=" flex flex-col items-start text-[6vw] lg:text-[3vw] font-[two] py-2">Espresso </div>
           <div className="flex items-center justify-between border-b-1 pb-5 ">
-            <div className="sm:text-[1.2vw] text-[1.5vw] font-[two2]  text-left w-[60%]">Lorem ipsum dolor, sit amet consectetur .</div>
-            <div className="text-[2.5vw] font-[one]">RS - 450/-</div>
+            <div className="sm:text-[1.2vw] text-[2.5vw] font-[two2]  text-left w-[60%]">Lorem ipsum dolor, sit amet consectetur .</div>
+            <div className="lg:text-[2.5vw] text-[5vw] font-[one]">RS - 450/-</div>
           </div>
         </div>
         <div className="menuitem  px-10 md:px-auto md:pl-8 ">
-            <div className=" flex flex-col items-start text-[3vw] font-[two] py-2">Espresso </div>
+            <div className=" flex flex-col items-start text-[6vw] lg:text-[3vw] font-[two] py-2">Espresso </div>
           <div className="flex items-center justify-between border-b-1 pb-5 ">
-            <div className="sm:text-[1.2vw] text-[1.5vw] font-[two2]  text-left w-[60%]">Lorem ipsum dolor, sit amet consectetur .</div>
-            <div className="text-[2.5vw] font-[one]">RS - 450/-</div>
+            <div className="sm:text-[1.2vw] text-[2.5vw] font-[two2]  text-left w-[60%]">Lorem ipsum dolor, sit amet consectetur .</div>
+            <div className="lg:text-[2.5vw] text-[5vw] font-[one]">RS - 450/-</div>
           </div>
         </div>
         <div className="menuitem  px-10 md:px-auto md:pl-8 ">
-            <div className=" flex flex-col items-start text-[3vw] font-[two] py-2">Espresso </div>
+            <div className=" flex flex-col items-start text-[6vw] lg:text-[3vw] font-[two] py-2">Espresso </div>
           <div className="flex items-center justify-between border-b-1 pb-5 ">
-            <div className="sm:text-[1.2vw] text-[1.5vw] font-[two2]  text-left w-[60%]">Lorem ipsum dolor, sit amet consectetur .</div>
-            <div className="text-[2.5vw] font-[one]">RS - 450/-</div>
+            <div className="sm:text-[1.2vw] text-[2.5vw] font-[two2]  text-left w-[60%]">Lorem ipsum dolor, sit amet consectetur .</div>
+            <div className="lg:text-[2.5vw] text-[5vw] font-[one]">RS - 450/-</div>
           </div>
         </div>
         <div className="menuitem  px-10 md:px-auto md:pl-8 ">
-            <div className=" flex flex-col items-start text-[3vw] font-[two] py-2">Espresso </div>
+            <div className=" flex flex-col items-start text-[6vw] lg:text-[3vw] font-[two] py-2">Espresso </div>
           <div className="flex items-center justify-between border-b-1 pb-5 ">
-            <div className="sm:text-[1.2vw] text-[1.5vw] font-[two2]  text-left w-[60%]">Lorem ipsum dolor, sit amet consectetur .</div>
-            <div className="text-[2.5vw] font-[one]">RS - 450/-</div>
+            <div className="sm:text-[1.2vw] text-[2.5vw] font-[two2]  text-left w-[60%]">Lorem ipsum dolor, sit amet consectetur .</div>
+            <div className="lg:text-[2.5vw] text-[5vw] font-[one]">RS - 450/-</div>
           </div>
         </div>
         <div className="menuitem  px-10 md:px-auto md:pl-8 ">
-            <div className=" flex flex-col items-start text-[3vw] font-[two] py-2">Espresso </div>
+            <div className=" flex flex-col items-start text-[6vw] lg:text-[3vw] font-[two] py-2">Espresso </div>
           <div className="flex items-center justify-between border-b-1 pb-5 ">
-            <div className="sm:text-[1.2vw] text-[1.5vw] font-[two2]  text-left w-[60%]">Lorem ipsum dolor, sit amet consectetur .</div>
-            <div className="text-[2.5vw] font-[one]">RS - 450/-</div>
+            <div className="sm:text-[1.2vw] text-[2.5vw] font-[two2]  text-left w-[60%]">Lorem ipsum dolor, sit amet consectetur .</div>
+            <div className="lg:text-[2.5vw] text-[5vw] font-[one]">RS - 450/-</div>
           </div>
         </div>
         <div className="menuitem  px-10 md:px-auto md:pl-8 ">
-            <div className=" flex flex-col items-start text-[3vw] font-[two] py-2">Espresso </div>
+            <div className=" flex flex-col items-start text-[6vw] lg:text-[3vw] font-[two] py-2">Espresso </div>
           <div className="flex items-center justify-between border-b-1 pb-5 ">
-            <div className="sm:text-[1.2vw] text-[1.5vw] font-[two2]  text-left w-[60%]">Lorem ipsum dolor, sit amet consectetur .</div>
-            <div className="text-[2.5vw] font-[one]">RS - 450/-</div>
+            <div className="sm:text-[1.2vw] text-[2.5vw] font-[two2]  text-left w-[60%]">Lorem ipsum dolor, sit amet consectetur .</div>
+            <div className="lg:text-[2.5vw] text-[5vw] font-[one]">RS - 450/-</div>
           </div>
         </div>
         <div className="menuitem  px-10 md:px-auto md:pl-8 ">
-            <div className=" flex flex-col items-start text-[3vw] font-[two] py-2">Espresso </div>
+            <div className=" flex flex-col items-start text-[6vw] lg:text-[3vw] font-[two] py-2">Espresso </div>
           <div className="flex items-center justify-between border-b-1 pb-5 ">
-            <div className="sm:text-[1.2vw] text-[1.5vw] font-[two2]  text-left w-[60%]">Lorem ipsum dolor, sit amet consectetur .</div>
-            <div className="text-[2.5vw] font-[one]">RS - 450/-</div>
+            <div className="sm:text-[1.2vw] text-[2.5vw] font-[two2]  text-left w-[60%]">Lorem ipsum dolor, sit amet consectetur .</div>
+            <div className="lg:text-[2.5vw] text-[5vw] font-[one]">RS - 450/-</div>
           </div>
         </div>
         <div className="menuitem  px-10 md:px-auto md:pl-8 ">
-            <div className=" flex flex-col items-start text-[3vw] font-[two] py-2">Espresso </div>
+            <div className=" flex flex-col items-start text-[6vw] lg:text-[3vw] font-[two] py-2">Espresso </div>
           <div className="flex items-center justify-between border-b-1 pb-5 ">
-            <div className="sm:text-[1.2vw] text-[1.5vw] font-[two2]  text-left w-[60%]">Lorem ipsum dolor, sit amet consectetur .</div>
-            <div className="text-[2.5vw] font-[one]">RS - 450/-</div>
+            <div className="sm:text-[1.2vw] text-[2.5vw] font-[two2]  text-left w-[60%]">Lorem ipsum dolor, sit amet consectetur .</div>
+            <div className="lg:text-[2.5vw] text-[5vw] font-[one]">RS - 450/-</div>
           </div>
         </div>
         <div className="menuitem  px-10 md:px-auto md:pl-8 ">
-            <div className=" flex flex-col items-start text-[3vw] font-[two] py-2">Espresso </div>
+            <div className=" flex flex-col items-start text-[6vw] lg:text-[3vw] font-[two] py-2">Espresso </div>
           <div className="flex items-center justify-between border-b-1 pb-5 ">
-            <div className="sm:text-[1.2vw] text-[1.5vw] font-[two2]  text-left w-[60%]">Lorem ipsum dolor, sit amet consectetur .</div>
-            <div className="text-[2.5vw] font-[one]">RS - 450/-</div>
+            <div className="sm:text-[1.2vw] text-[2.5vw] font-[two2]  text-left w-[60%]">Lorem ipsum dolor, sit amet consectetur .</div>
+            <div className="lg:text-[2.5vw] text-[5vw] font-[one]">RS - 450/-</div>
           </div>
         </div>
         <div className="menuitem  px-10 md:px-auto md:pl-8 ">
-            <div className=" flex flex-col items-start text-[3vw] font-[two] py-2">Espresso </div>
+            <div className=" flex flex-col items-start text-[6vw] lg:text-[3vw] font-[two] py-2">Espresso </div>
           <div className="flex items-center justify-between border-b-1 pb-5 ">
-            <div className="sm:text-[1.2vw] text-[1.5vw] font-[two2]  text-left w-[60%]">Lorem ipsum dolor, sit amet consectetur .</div>
-            <div className="text-[2.5vw] font-[one]">RS - 450/-</div>
+            <div className="sm:text-[1.2vw] text-[2.5vw] font-[two2]  text-left w-[60%]">Lorem ipsum dolor, sit amet consectetur .</div>
+            <div className="lg:text-[2.5vw] text-[5vw] font-[one]">RS - 450/-</div>
           </div>
         </div>
         <div className="menuitem  px-10 md:px-auto md:pl-8 ">
-            <div className=" flex flex-col items-start text-[3vw] font-[two] py-2">Espresso </div>
+            <div className=" flex flex-col items-start text-[6vw] lg:text-[3vw] font-[two] py-2">Espresso </div>
           <div className="flex items-center justify-between border-b-1 pb-5 ">
-            <div className="sm:text-[1.2vw] text-[1.5vw] font-[two2]  text-left w-[60%]">Lorem ipsum dolor, sit amet consectetur .</div>
-            <div className="text-[2.5vw] font-[one]">RS - 450/-</div>
+            <div className="sm:text-[1.2vw] text-[2.5vw] font-[two2]  text-left w-[60%]">Lorem ipsum dolor, sit amet consectetur .</div>
+            <div className="lg:text-[2.5vw] text-[5vw] font-[one]">RS - 450/-</div>
           </div>
         </div>
         <div className="menuitem  px-10 md:px-auto md:pl-8 ">
-            <div className=" flex flex-col items-start text-[3vw] font-[two] py-2">Espresso </div>
+            <div className=" flex flex-col items-start text-[6vw] lg:text-[3vw] font-[two] py-2">Espresso </div>
           <div className="flex items-center justify-between border-b-1 pb-5 ">
-            <div className="sm:text-[1.2vw] text-[1.5vw] font-[two2]  text-left w-[60%]">Lorem ipsum dolor, sit amet consectetur .</div>
-            <div className="text-[2.5vw] font-[one]">RS - 450/-</div>
+            <div className="sm:text-[1.2vw] text-[2.5vw] font-[two2]  text-left w-[60%]">Lorem ipsum dolor, sit amet consectetur .</div>
+            <div className="lg:text-[2.5vw] text-[5vw] font-[one]">RS - 450/-</div>
           </div>
         </div>
         <div className="menuitem  px-10 md:px-auto md:pl-8 ">
-            <div className=" flex flex-col items-start text-[3vw] font-[two] py-2">Espresso </div>
+            <div className=" flex flex-col items-start text-[6vw] lg:text-[3vw] font-[two] py-2">Espresso </div>
           <div className="flex items-center justify-between border-b-1 pb-5 ">
-            <div className="sm:text-[1.2vw] text-[1.5vw] font-[two2]  text-left w-[60%]">Lorem ipsum dolor, sit amet consectetur .</div>
-            <div className="text-[2.5vw] font-[one]">RS - 450/-</div>
+            <div className="sm:text-[1.2vw] text-[2.5vw] font-[two2]  text-left w-[60%]">Lorem ipsum dolor, sit amet consectetur .</div>
+            <div className="lg:text-[2.5vw] text-[5vw] font-[one]">RS - 450/-</div>
           </div>
         </div>
         <div className="menuitem  px-10 md:px-auto md:pl-8 ">
-            <div className=" flex flex-col items-start text-[3vw] font-[two] py-2">Espresso </div>
+            <div className=" flex flex-col items-start text-[6vw] lg:text-[3vw] font-[two] py-2">Espresso </div>
           <div className="flex items-center justify-between border-b-1 pb-5 ">
-            <div className="sm:text-[1.2vw] text-[1.5vw] font-[two2]  text-left w-[60%]">Lorem ipsum dolor, sit amet consectetur .</div>
-            <div className="text-[2.5vw] font-[one]">RS - 450/-</div>
+            <div className="sm:text-[1.2vw] text-[2.5vw] font-[two2]  text-left w-[60%]">Lorem ipsum dolor, sit amet consectetur .</div>
+            <div className="lg:text-[2.5vw] text-[5vw] font-[one]">RS - 450/-</div>
           </div>
         </div>
         <div className="menuitem  px-10 md:px-auto md:pl-8 ">
-            <div className=" flex flex-col items-start text-[3vw] font-[two] py-2">Espresso </div>
+            <div className=" flex flex-col items-start text-[6vw] lg:text-[3vw] font-[two] py-2">Espresso </div>
           <div className="flex items-center justify-between border-b-1 pb-5 ">
-            <div className="sm:text-[1.2vw] text-[1.5vw] font-[two2]  text-left w-[60%]">Lorem ipsum dolor, sit amet consectetur .</div>
-            <div className="text-[2.5vw] font-[one]">RS - 450/-</div>
+            <div className="sm:text-[1.2vw] text-[2.5vw] font-[two2]  text-left w-[60%]">Lorem ipsum dolor, sit amet consectetur .</div>
+            <div className="lg:text-[2.5vw] text-[5vw] font-[one]">RS - 450/-</div>
           </div>
         </div>
         <div className="menuitem  px-10 md:px-auto md:pl-8 ">
-            <div className=" flex flex-col items-start text-[3vw] font-[two] py-2">Espresso </div>
-          <div className="flex items-center justify-between border-b-1 pb-5 ">
-            <div className="sm:text-[1.2vw] text-[1.5vw] font-[two2]  text-left w-[60%]">Lorem ipsum dolor, sit amet consectetur .</div>
-            <div className="text-[2.5vw] font-[one]">RS - 450/-</div>
+            <div className=" flex flex-col items-start text-[6vw] lg:text-[3vw] font-[two] py-2">Espresso </div>
+          <div className="flex items-center justify-between pb-5 ">
+            <div className="sm:text-[1.2vw] text-[2.5vw] font-[two2]  text-left w-[60%]">Lorem ipsum dolor, sit amet consectetur .</div>
+            <div className="lg:text-[2.5vw] text-[5vw] font-[one]">RS - 450/-</div>
           </div>
         </div>
+       
+      
   
 
         </div>

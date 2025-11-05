@@ -124,7 +124,7 @@ mm.add("(min-width: 1000px) and (max-width: 1500px)", () => {
     <div className=" h-screen w-screen">
 
 
-      <div className="nav font-[two2] text-[#784b29]  flex justify-between items-center lg:px-10 px-5 py-3 text-[2.5vw] lg:text-[1.7vw]">
+      <div className="nav font-[two2] text-[#784b29]  flex justify-between items-center lg:px-10 px-10 py-3 text-[3vw] lg:text-[1.7vw]">
        
         <a
           href="https://maps.app.goo.gl/Bno2QXkkedsYawqC8?g_st=aw"
