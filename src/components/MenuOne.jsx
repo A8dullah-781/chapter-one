@@ -22,7 +22,6 @@ useGSAP(() => {
       scrub: 2,
       pin: true,
        anticipatePin: 1,
-      markers: true,
     },
   });
 
@@ -40,7 +39,8 @@ useGSAP(() => {
   gsap.set(imagesRef.current[0], { scale: 1, opacity: 1, zIndex: 3 });
 
   // baki pre-scaled and hidden
-  gsap.set(imagesRef.current.slice(1), { scale: 1.5, opacity: 0, zIndex: 2 });
+  gsap.set(imagesRef.current[1], { scale: 1.5, opacity: 1, zIndex: 2 });
+  gsap.set(imagesRef.current[2], { scale: 1.8, opacity: 1, zIndex: 1});
 
   // second image transition
   tl.to(imagesRef.current[1], {
@@ -52,13 +52,28 @@ useGSAP(() => {
     imagesRef.current[0],
     {
       y: "-150%",
-      scale: 1.2,
+      scale: 1,
       duration: 1,
       ease: "power2.inOut",
     },
     "<"
   );
 
+  tl.to(imagesRef.current[2], {
+    scale: 1,
+    opacity: 1,
+    duration: 2,
+    ease: "power2.out",
+  }).to(
+    imagesRef.current[1],
+    {
+      y: "-150%", // second image bhi slide out
+      scale: 1.2,
+      duration: 1,
+      ease: "power2.inOut",
+    },
+    "<"
+  );
 
 });
 
@@ -68,7 +83,7 @@ useGSAP(() => {
   
   return (
     <div className=" h-auto justify-center flex items-center bg-[#533116]">
-      <div className="bg-[#9b663a] pb-5 h-auto flex mt-10 sm:mt-0 rounded-4xl w-[90%]">
+      <div className="bg-[#9b663a] mb-5 h-auto flex mt-10 sm:mt-0 rounded-4xl w-[90%]">
         <div className="lg:w-1/2 w-full h-auto rounded-4xl  text-[#f2e5bc] ">
 
         <div className="title items-center flex flex-col">
@@ -199,7 +214,7 @@ useGSAP(() => {
         ref={sectionRef} 
         className="rounded-4xl w-[90%] m-8 overflow-hidden  relative h-[80vh]"
       >
-        {["/images/boldone.jpeg", "/images/boldtwo.jpeg"].map(
+        {["/images/boldone.jpeg", "/images/boldtwo.jpeg", "/images/boldthree.jpeg"].map(
           (src, i) => (
             <img
               key={i}
