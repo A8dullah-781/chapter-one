@@ -68,8 +68,8 @@ useGSAP(() => {
   
   return (
     <div className=" h-auto justify-center flex items-center bg-[#533116]">
-      <div className="bg-[#9b663a] h-auto flex mt-10 sm:mt-0 rounded-4xl w-[90%]">
-        <div className="md:w-1/2 w-full h-auto rounded-4xl  text-[#f2e5bc] ">
+      <div className="bg-[#9b663a] pb-5 h-auto flex mt-10 sm:mt-0 rounded-4xl w-[90%]">
+        <div className="lg:w-1/2 w-full h-auto rounded-4xl  text-[#f2e5bc] ">
 
         <div className="title items-center flex flex-col">
           <div className="font-[one] text-[8vw] sm:text-[5.5vw] px-5 pt-5">COLD BREWS</div>
@@ -194,7 +194,7 @@ useGSAP(() => {
         </div>
         </div>
        
-           <div className="w-1/2 hidden md:block h-full rounded-4xl relative">
+           <div className="w-1/2 hidden lg:block h-full rounded-4xl relative">
       <div
         ref={sectionRef} 
         className="rounded-4xl w-[90%] m-8 overflow-hidden  relative h-[80vh]"
