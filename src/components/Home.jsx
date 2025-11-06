@@ -49,7 +49,7 @@ const Home = () => {
 const mm = gsap.matchMedia();
 
 // Large screens (1000px–1500px)
-mm.add("(min-width: 1000px) and (max-width: 1500px)", () => {
+mm.add("(min-width: 700px) and (max-width: 1900px)", () => {
   gsap.to(layerRef.current, {
     scrollTrigger: {
       trigger: layerRef.current,
@@ -151,7 +151,7 @@ mm.add("(min-width: 1000px) and (max-width: 1500px)", () => {
           <div className="text-[12vw] lg:text-[8vw] ">CHAPTER</div>
           <div className="flex one lg:-mt-5 -mt-2 ">
             <img
-              className="md:w-[8vw] w-[10vw] md:h-[11vw] lg:h-[8vw] h-[6vh] bean -mr-1 text-[#533116]"
+              className="md:w-[8vw] w-[10vw] md:h-[11vw] lg:h-[8vw] h-[5.5vh] bean lg:-mr-1 text-[#533116]"
               src="/images/bean.png"
               alt=""
             />

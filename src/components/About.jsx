@@ -37,19 +37,19 @@ ease: "bounce.out",
       })
   return (
     <div>
-       <div className='h-auto lg:h-screen relative w-screen  z-10 flex md:flex-row flex-col  mt-25 '>
-        <div className='lg:h-full relative flex justify-center items-center   lg:w-1/2'>
-        <div className='bg-red-400 lg:h-[70%] overflow-hidden rounded-4xl lg:w-[70%] w-[85%]'>
-            <img className='object-contain' src="/images/mainout.jpeg" alt="" />
+       <div className='h-auto lg:h-screen relative w-screen  z-10 flex lg:flex-row flex-col xl:pt-28 mt-25 '>
+        <div className='md:h-full relative flex justify-center items-center   lg:w-1/2'>
+        <div className='lg:h-[70%] md:mt-30 lg:mt-0 overflow-hidden rounded-4xl lg:w-[70%] w-[85%]'>
+            <img className='object-contain rounded-4xl' src="/images/mainout.jpeg" alt="" />
         </div>
         </div>
-        <div className='lg:h-full  gap-10  lg:w-1/2'>
-        <div className='items-center font-[one] lg:text-[5vw] text-[8vw] -rotate-6 text-[#533116] px-5 flex'>
+        <div className='md:h-full  gap-10  lg:w-1/2'>
+        <div className='items-center  font-[one] lg:text-[5vw] text-[8vw] -rotate-6 text-[#533116] md:px-15 lg:px-5 px-5 flex'>
          <p className='border-[5px]  px-5 rounded-3xl mt-8'>About</p>
         </div>
-        <div className='flex items-start mt-8 lg:mt-15 lg:pl-5 pl-10 pr-15 gap-3 justify-center flex-col'>
+        <div className='flex items-start mt-8 md:mt-15 lg:pl-5 md:pl-15 pl-10 pr-15 gap-3 justify-center flex-col'>
         <div className='font-[two] text-[6vw] lg:text-[2vw] text-[#663E20]'>We are more than a Coffe :)</div>
-        <div className='font-[two2] pb-8 lg:pb-0  leading-none whitespace-none text-[3.5vw] lg:text-[1.5vw] text-[#533116]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto necessitatibus sequi similique dolorum consectetur ad eligendi pariatur itaque. Quas beatae sunt blanditiis, unde cumque in voluptatibus dolorem laudantium mollitia excepturi officiis quis perferendis non aliquid eveniet architecto incidunt obcaecati officia quod! Quasi repellat harum velit sed blanditiis delectus. Consequuntur doloremque facilis distinctio totam? Beatae magni, sapiente id enim quia voluptatemnam corrupti velit itaque autem numquam illo iusto dolores, ad blanditiis neque ipsum asperiores animi voluptate sunt.r nostrum eum impedit nam corrupti velit itaque autem numquam illo iusto dolores, ad blanditiis neque ipsum asperiores animi voluptate sunt.</div>
+        <div className='font-[two2] pb-8  lg:pb-0  leading-none whitespace-none text-[3.5vw] lg:text-[1.5vw] text-[#533116]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto necessitatibus sequi similique dolorum consectetur ad eligendi pariatur itaque. Quas beatae sunt blanditiis, unde cumque in voluptatibus dolorem laudantium mollitia excepturi officiis quis perferendis non aliquid eveniet architecto incidunt obcaecati officia quod! Quasi repellat harum velit sed blanditiis delectus. Consequuntur doloremque facilis distinctio totam? Beatae magni, sapiente id enim quia voluptatemnam corrupti velit itaque autem numquam illo iusto dolores, ad blanditiis neque ipsum asperiores animi voluptate sunt.r nostrum eum impedit nam corrupti velit itaque autem numquam illo iusto dolores, ad blanditiis neque ipsum asperiores animi voluptate sunt.</div>
      
         </div>
         </div>
