@@ -37,9 +37,9 @@ ease: "bounce.out",
       })
   return (
     <div>
-       <div className='h-auto lg:h-screen relative w-screen  z-10 flex lg:flex-row flex-col xl:pt-28 mt-25 '>
+       <div className='h-auto lg:h-screen relative w-screen lg:mb-10  z-10 flex lg:flex-row flex-col xl:pt-28 mt-25 lg:mt-10 '>
         <div className='md:h-full relative flex justify-center items-center   lg:w-1/2'>
-        <div className='lg:h-[70%] md:mt-30 lg:mt-0 overflow-hidden rounded-4xl lg:w-[70%] w-[85%]'>
+        <div className='lg:h-[80%] md:mt-30 lg:mt-0 overflow-hidden rounded-4xl lg:w-[70%] w-[85%]'>
             <img className='object-contain rounded-4xl' src="/images/mainout.jpeg" alt="" />
         </div>
         </div>

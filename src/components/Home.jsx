@@ -68,7 +68,7 @@ mm.add("(min-width: 700px) and (max-width: 1900px)", () => {
       end: "+=600",
       scrub: false,
       pin: true,
-      pinSpacing:false
+      pinSpacing:false,
     },
   });
 });
