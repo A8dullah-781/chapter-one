@@ -163,7 +163,7 @@ mm.add("(min-width: 1000px) and (max-width: 1500px)", () => {
           ref={layerRef}
           viewBox="0 0 1200 120"
           preserveAspectRatio="none"
-          className="absolute lehar bottom-0 left-0 w-full sm:h-[37vh] md:h-[25vh] h-[15vh] "
+          className="absolute lehar bottom-0 left-0 w-full sm:h-[37vh] md:h-[25vh] h-[9vh] "
         >
           <path
             id="wavePath"
@@ -176,7 +176,7 @@ mm.add("(min-width: 1000px) and (max-width: 1500px)", () => {
           ref={layerReff}
           viewBox="0 0 1200 120"
           preserveAspectRatio="none"
-          className="absolute lehar bottom-0 left-0 w-full sm:h-[32vh] md:h-[20vh] h-[12vh] "
+          className="absolute lehar bottom-0 left-0 w-full sm:h-[32vh] md:h-[20vh] h-[6vh] "
         >
           <path
             id="wavePath"

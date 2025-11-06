@@ -36,7 +36,7 @@ gsap.fromTo(
 ease: "bounce.out",
     scrollTrigger: {
       trigger: layerRef.current,
-      start: "top 80%", 
+      start: "top 90%", 
       scrub: true,
     },
   }
@@ -51,7 +51,7 @@ gsap.fromTo(
    ease: "bounce.out",
     scrollTrigger: {
       trigger: layerReff.current,
-      start: "top 80%", 
+      start: "top 90%", 
       scrub: true,
     },
   }

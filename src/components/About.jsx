@@ -29,7 +29,7 @@ gsap.fromTo(
 ease: "bounce.out",
     scrollTrigger: {
       trigger: layerRef.current,
-      start: "top 80%", 
+      start: "top 90%", 
       scrub: true,
     },
   }
@@ -37,7 +37,7 @@ ease: "bounce.out",
       })
   return (
     <div>
-       <div className='h-auto lg:h-screen relative w-screen  z-10 lg:flex flex-col  mt-25 '>
+       <div className='h-auto lg:h-screen relative w-screen  z-10 flex md:flex-row flex-col  mt-25 '>
         <div className='lg:h-full relative flex justify-center items-center   lg:w-1/2'>
         <div className='bg-red-400 lg:h-[70%] overflow-hidden rounded-4xl lg:w-[70%] w-[85%]'>
             <img className='object-contain' src="/images/mainout.jpeg" alt="" />
