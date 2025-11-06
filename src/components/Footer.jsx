@@ -37,7 +37,7 @@ const  Footer = () => {
 
           <div className="flex justify-center items-center">
             <img
-              className="md:w-[8vw] w-[10vw] md:h-[11vw] lg:h-[10vw] h-[6vh] bean -mr-1 text-[#fff]"
+              className="md:w-[8vw] w-[9vw] md:h-[11vw] lg:h-[10vw] h-[6vh] bean lg:-mr-1 text-[#fff]"
               src="/images/bean.png"
                 
               alt=""
