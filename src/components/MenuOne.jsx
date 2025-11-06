@@ -140,7 +140,7 @@ useGSAP(() => {
         <div className="lg:w-1/2 w-full h-auto rounded-4xl  text-[#f2e5bc] ">
 
         <div className="title items-center flex flex-col">
-          <div className="font-[one] text-[15vw] sm:text-[5.5vw] pt-5">COLD BREWS</div>
+          <div className="font-[one] text-[12vw] sm:text-[5.5vw] pt-5">COLD BREWS</div>
         <div className="font-[two2] text-[3vw] mb-2 sm:mb-0 sm:text-[1.5vw] border-b-1 pb-1 sm:pb-5 ">Served hot, on ice, and blended -- Just let your barista know</div>
         </div>
         <div className="allitems">
