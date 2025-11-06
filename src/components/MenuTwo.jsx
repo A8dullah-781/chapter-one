@@ -31,7 +31,7 @@ gsap.fromTo(
   layerRef.current,
   { y: "100%"},
   {
-    y: "0%",
+    y: "5%",
     opacity: 1,
 ease: "bounce.out",
     scrollTrigger: {
@@ -46,7 +46,7 @@ gsap.fromTo(
   layerReff.current,
   { y: "100%" },
   {
-    y: "0%",
+    y: "5%",
     opacity: 1,
    ease: "bounce.out",
     scrollTrigger: {
@@ -330,7 +330,7 @@ gsap.fromTo(
     </div>
       </div>
     </div>
-     <div className="relative w-full  z-0 rotate-180">
+     <div className="relative w-full -mt-1 z-0 rotate-180">
        <svg
           ref={layerRef}
           viewBox="0 0 1200 120"

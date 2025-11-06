@@ -11,6 +11,7 @@ import Blank from "./components/Blank";
 import MenuOne from "./components/MenuOne";
 import MenuTwo from "./components/MenuTwo";
 import About from "./components/About";
+import Footer from "./components/Footer";
 
 const App = () => {
 
@@ -63,6 +64,7 @@ const App = () => {
       <MenuOne />
       <MenuTwo/>
       <About/>
+      <Footer/>
     </div>
   );
 };
