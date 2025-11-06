@@ -157,7 +157,7 @@ gsap.fromTo(
   
   return ( <div>
     
-    <div className=" h-auto justify-center relative flex z-10 items-center bg-[#533116]">
+    <div className=" h-auto justify-center  relative flex z-10 items-center bg-[#533116]">
       <div className="bg-[#bed9eb] mb-5 h-auto flex mt-10 sm:mt-0 rounded-4xl w-[90%]">
         <div className="lg:w-1/2 w-full h-auto rounded-4xl  text-[#9b663a] "> <div></div>
 

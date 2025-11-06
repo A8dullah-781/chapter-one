@@ -107,7 +107,7 @@ useGSAP(() => {
   
   
   return ( <div>
-    <div className="relative w-full lg:hidden">
+    <div className="relative  w-full lg:hidden">
             <svg
           ref={layerRef}
           viewBox="0 0 1200 120"
