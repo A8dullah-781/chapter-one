@@ -27,7 +27,7 @@ const  Footer = () => {
     })
     //h-[30vh] md:h-[50vh] lg:h-[80vh]
   return (
-    <div className=' xl:pt-24 lg:pt-20 md:pt-40 pt-16 pb-5 lg:pb-10 flex flex-col items-center bg-[#784b29]' >
+    <div className=' xl:pt-24 lg:pt-20 md:pt-40 pt-16 pb-10 flex flex-col items-center bg-[#784b29]' >
         <div className="maintext text-[#f2e5bc]  font-[one] ">
           <div className="lhr text-[5vw] lg:text-[5vw] lg:-mb-7 pl-0 ">LAHORE</div>
           <div className="flex justify-center gap-2 lg:gap-6 items-center">
