@@ -3,6 +3,10 @@ import gsap from "gsap";
 import { useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { SplitText } from 'gsap/all'
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { matcha, frappe, chillers } from "../../constants/constants";
 
 const MenuOne = () => {
   const boldoneRef = useRef();
@@ -13,6 +17,54 @@ gsap.registerPlugin(ScrollTrigger);
  const layerRef = useRef();
   const layerReff = useRef();
   const waveRef = useRef()
+
+
+  //    const [matcha, setMatcha] = useState([]);
+
+
+  // useEffect(() => {
+  //   axios
+  //     .get("http://localhost:1337/api/chapter-one-2s")
+  //     .then(res => {
+  //       console.log("Full API response:", res);
+  //       console.log("Response data only:", res.data);
+  //       console.log("Actual products array:", res.data.data);
+  //       setMatcha(res.data.data);
+  //     })
+  //     .catch(err => console.error("Error:", err));
+  // }, []);
+
+
+  //    const [frappe, setFrappe] = useState([]);
+
+
+  // useEffect(() => {
+  //   axios
+  //     .get("http://localhost:1337/api/chapter-one-3s")
+  //     .then(res => {
+  //       console.log("Full API response:", res);
+  //       console.log("Response data only:", res.data);
+  //       console.log("Actual products array:", res.data.data);
+  //       setFrappe(res.data.data);
+  //     })
+  //     .catch(err => console.error("Error:", err));
+  // }, []);
+
+  //    const [chiller, setChiller] = useState([]);
+
+
+  // useEffect(() => { 
+  //   axios
+  //     .get("http://localhost:1337/api/chapter-one-4s")
+  //     .then(res => {
+  //       console.log("Full API response:", res);
+  //       console.log("Response data only:", res.data);
+  //       console.log("Actual products array:", res.data.data);
+  //       setChiller(res.data.data);
+  //     })
+  //     .catch(err => console.error("Error:", err));
+  // }, []);
+
 
 
 useGSAP(() => {
@@ -149,6 +201,35 @@ gsap.fromTo(
     "<"
   );
 
+
+   // select all title elements
+const titles = gsap.utils.toArray(".title");
+
+titles.forEach(title => {
+  const split = new SplitText(title, { type: "chars" });
+
+  gsap.from(split.chars, {
+    yPercent: 20,           // thoda neeche se aayein
+    opacity: 0,             // halka fade-in
+    duration: 0.8,          // fast but smooth
+    ease: "power2.out",     // no bounce, natural motion
+    stagger: {
+      amount: 0.4,          // pure word reveal timing
+      from: "start"         // left to right reveal
+    },
+    scrollTrigger: {
+      trigger: title,
+      start: "top 85%",     // jab title viewport me aaye tab
+      toggleActions: "restart none none restart",
+
+      invalidateOnRefresh: true,
+    }
+  });
+});
+
+
+
+
 });
 
 
@@ -158,156 +239,79 @@ gsap.fromTo(
   return ( <div>
     
     <div className=" h-auto justify-center  relative flex z-10 items-center bg-[#533116]">
-      <div className="bg-[#bed9eb] mb-5 h-auto flex mt-10 sm:mt-0 rounded-4xl w-[90%]">
+      <div className="bg-[#bed9eb] mb-5 start h-auto flex mt-10 sm:mt-0 rounded-4xl w-[90%]">
         <div className="lg:w-1/2 w-full h-auto rounded-4xl  text-[#9b663a] "> <div></div>
 
-        <div className="title items-center flex flex-col">
-          <div className="font-[one] text-[9vw] sm:text-[4vw] whitespace-none  border-b-1 pb-1 sm:pb-5  pt-5">MATCHA BLENDS</div>
+        <div className=" items-center  flex flex-col">
+          <div className="font-[one] title text-[9vw] sm:text-[4vw] whitespace-none  border-b-1 pb-1 sm:pb-5  pt-5">MATCHA BLENDS</div>
        
         </div>
 
-        <div className="allitems">
-
-       
-        <div className="menuitem  px-10 md:px-auto md:pl-8 ">
-            <div className=" flex flex-col items-start text-[6vw] lg:text-[3vw] font-[two] py-2">Espresso </div>
-          <div className="flex items-center justify-between border-b-1 pb-5 ">
-            <div className="sm:text-[1.2vw] text-[2.5vw] font-[two2]  text-left w-[60%]">Lorem ipsum dolor, sit amet consectetur .</div>
-            <div className="lg:text-[2.5vw] text-[5vw] font-[one]">RS - 450/-</div>
-          </div>
+         <div className="allitems">
+  {matcha.map((item) => (
+    <div key={item.id} className="menuitem px-10 md:px-auto md:pl-8">
+      <div className="flex flex-col items-start text-[6vw] lg:text-[3vw] font-[two] py-2">
+        {item.name}
+      </div>
+      <div className="flex items-center justify-between border-b-1 pb-5">
+        <div className="sm:text-[1.2vw] text-[2.5vw] font-[two2] text-left w-[60%]">
+          {item.description}
         </div>
-        <div className="menuitem  px-10 md:px-auto md:pl-8 ">
-            <div className=" flex flex-col items-start text-[6vw] lg:text-[3vw] font-[two] py-2">Espresso </div>
-          <div className="flex items-center justify-between border-b-1 pb-5 ">
-            <div className="sm:text-[1.2vw] text-[2.5vw] font-[two2]  text-left w-[60%]">Lorem ipsum dolor, sit amet consectetur .</div>
-            <div className="lg:text-[2.5vw] text-[5vw] font-[one]">RS - 450/-</div>
-          </div>
+        <div className="lg:text-[2.5vw] text-[5vw] font-[one]">
+          RS - {item.price}/-
         </div>
-        <div className="menuitem  px-10 md:px-auto md:pl-8 ">
-            <div className=" flex flex-col items-start text-[6vw] lg:text-[3vw] font-[two] py-2">Espresso </div>
-          <div className="flex items-center justify-between border-b-1 pb-5 ">
-            <div className="sm:text-[1.2vw] text-[2.5vw] font-[two2]  text-left w-[60%]">Lorem ipsum dolor, sit amet consectetur .</div>
-            <div className="lg:text-[2.5vw] text-[5vw] font-[one]">RS - 450/-</div>
-          </div>
-        </div>
-        <div className="menuitem  px-10 md:px-auto md:pl-8 ">
-            <div className=" flex flex-col items-start text-[6vw] lg:text-[3vw] font-[two] py-2">Espresso </div>
-          <div className="flex items-center justify-between border-b-1 pb-5 ">
-            <div className="sm:text-[1.2vw] text-[2.5vw] font-[two2]  text-left w-[60%]">Lorem ipsum dolor, sit amet consectetur .</div>
-            <div className="lg:text-[2.5vw] text-[5vw] font-[one]">RS - 450/-</div>
-          </div>
-        </div>
-        <div className="menuitem  px-10 md:px-auto md:pl-8 ">
-            <div className=" flex flex-col items-start text-[6vw] lg:text-[3vw] font-[two] py-2">Espresso </div>
-          <div className="flex items-center justify-between border-b-1 pb-5 ">
-            <div className="sm:text-[1.2vw] text-[2.5vw] font-[two2]  text-left w-[60%]">Lorem ipsum dolor, sit amet consectetur .</div>
-            <div className="lg:text-[2.5vw] text-[5vw] font-[one]">RS - 450/-</div>
-          </div>
-        </div>
-       
-  
-
-        </div>
+      </div>
+    </div>
+  ))}
+</div>
       
-    <div className="title items-center flex flex-col">
-          <div className="font-[one] text-[9vw] sm:text-[4vw] whitespace-none  border-b-1 pb-1 sm:pb-5  pt-5">BARISTA'S PICK</div>
+    <div className=" items-center flex flex-col">
+          <div className="font-[one]  title text-[9vw] sm:text-[4vw] whitespace-none  border-b-1 pb-1 sm:pb-5  pt-5">BARISTA'S PICK</div>
        
         </div>
 
-        <div className="allitems">
-
-       
-         <div className="menuitem  px-10 md:px-auto md:pl-8 ">
-            <div className=" flex flex-col items-start text-[6vw] lg:text-[3vw] font-[two] py-2">Espresso </div>
-          <div className="flex items-center justify-between border-b-1 pb-5 ">
-            <div className="sm:text-[1.2vw] text-[2.5vw] font-[two2]  text-left w-[60%]">Lorem ipsum dolor, sit amet consectetur .</div>
-            <div className="lg:text-[2.5vw] text-[5vw] font-[one]">RS - 450/-</div>
-          </div>
+          <div className="allitems">
+  {frappe.map((item) => (
+    <div key={item.id} className="menuitem px-10 md:px-auto md:pl-8">
+      <div className="flex flex-col items-start text-[6vw] lg:text-[3vw] font-[two] py-2">
+        {item.name}
+      </div>
+      <div className="flex items-center justify-between border-b-1 pb-5">
+        <div className="sm:text-[1.2vw] text-[2.5vw] font-[two2] text-left w-[60%]">
+          {item.description}
         </div>
-        <div className="menuitem  px-10 md:px-auto md:pl-8 ">
-            <div className=" flex flex-col items-start text-[6vw] lg:text-[3vw] font-[two] py-2">Espresso </div>
-          <div className="flex items-center justify-between border-b-1 pb-5 ">
-            <div className="sm:text-[1.2vw] text-[2.5vw] font-[two2]  text-left w-[60%]">Lorem ipsum dolor, sit amet consectetur .</div>
-            <div className="lg:text-[2.5vw] text-[5vw] font-[one]">RS - 450/-</div>
-          </div>
+        <div className="lg:text-[2.5vw] text-[5vw] font-[one]">
+          RS - {item.price}/-
         </div>
-        <div className="menuitem  px-10 md:px-auto md:pl-8 ">
-            <div className=" flex flex-col items-start text-[6vw] lg:text-[3vw] font-[two] py-2">Espresso </div>
-          <div className="flex items-center justify-between border-b-1 pb-5 ">
-            <div className="sm:text-[1.2vw] text-[2.5vw] font-[two2]  text-left w-[60%]">Lorem ipsum dolor, sit amet consectetur .</div>
-            <div className="lg:text-[2.5vw] text-[5vw] font-[one]">RS - 450/-</div>
-          </div>
-        </div>
-        <div className="menuitem  px-10 md:px-auto md:pl-8 ">
-            <div className=" flex flex-col items-start text-[6vw] lg:text-[3vw] font-[two] py-2">Espresso </div>
-          <div className="flex items-center justify-between border-b-1 pb-5 ">
-            <div className="sm:text-[1.2vw] text-[2.5vw] font-[two2]  text-left w-[60%]">Lorem ipsum dolor, sit amet consectetur .</div>
-            <div className="lg:text-[2.5vw] text-[5vw] font-[one]">RS - 450/-</div>
-          </div>
-        </div>
-       
-       
-  
-
-        </div>
+      </div>
+    </div>
+  ))}
+</div>
 
   <div className="title items-center flex flex-col">
-          <div className="font-[one] text-[8vw] sm:text-[4vw] px-5 pt-5">FROSTED BLENDS</div>
+          <div className="font-[one] text-[8vw] title sm:text-[4vw] px-5 pt-5">FROSTED BLENDS</div>
         <div className="font-[two2] text-[2.5vw] mb-2 sm:mb-0 sm:text-[1.5vw] ">*These drinks are caffiene-free</div>
         <div className="w-[90%] border-b-1 pb-1 sm:pb-5"></div>
         </div>
 
 
- <div className="allitems">
-
-       
-         <div className="menuitem  px-10 md:px-auto md:pl-8 ">
-            <div className=" flex flex-col items-start text-[6vw] lg:text-[3vw] font-[two] py-2">Espresso </div>
-          <div className="flex items-center justify-between border-b-1 pb-5 ">
-            <div className="sm:text-[1.2vw] text-[2.5vw] font-[two2]  text-left w-[60%]">Lorem ipsum dolor, sit amet consectetur .</div>
-            <div className="lg:text-[2.5vw] text-[5vw] font-[one]">RS - 450/-</div>
-          </div>
+   <div className="allitems">
+  {chillers.map((item) => (
+    <div key={item.id} className="menuitem px-10 md:px-auto md:pl-8">
+      <div className="flex flex-col items-start text-[6vw] lg:text-[3vw] font-[two] py-2">
+        {item.name}
+      </div>
+      <div className="flex items-center justify-between border-b-1 pb-5">
+        <div className="sm:text-[1.2vw] text-[2.5vw] font-[two2] text-left w-[60%]">
+          {item.description}
         </div>
-        <div className="menuitem  px-10 md:px-auto md:pl-8 ">
-            <div className=" flex flex-col items-start text-[6vw] lg:text-[3vw] font-[two] py-2">Espresso </div>
-          <div className="flex items-center justify-between border-b-1 pb-5 ">
-            <div className="sm:text-[1.2vw] text-[2.5vw] font-[two2]  text-left w-[60%]">Lorem ipsum dolor, sit amet consectetur .</div>
-            <div className="lg:text-[2.5vw] text-[5vw] font-[one]">RS - 450/-</div>
-          </div>
+        <div className="lg:text-[2.5vw] text-[5vw] font-[one]">
+          RS - {item.price}/-
         </div>
-        <div className="menuitem  px-10 md:px-auto md:pl-8 ">
-            <div className=" flex flex-col items-start text-[6vw] lg:text-[3vw] font-[two] py-2">Espresso </div>
-          <div className="flex items-center justify-between border-b-1 pb-5 ">
-            <div className="sm:text-[1.2vw] text-[2.5vw] font-[two2]  text-left w-[60%]">Lorem ipsum dolor, sit amet consectetur .</div>
-            <div className="lg:text-[2.5vw] text-[5vw] font-[one]">RS - 450/-</div>
-          </div>
-        </div>
-        <div className="menuitem  px-10 md:px-auto md:pl-8 ">
-            <div className=" flex flex-col items-start text-[6vw] lg:text-[3vw] font-[two] py-2">Espresso </div>
-          <div className="flex items-center justify-between border-b-1 pb-5 ">
-            <div className="sm:text-[1.2vw] text-[2.5vw] font-[two2]  text-left w-[60%]">Lorem ipsum dolor, sit amet consectetur .</div>
-            <div className="lg:text-[2.5vw] text-[5vw] font-[one]">RS - 450/-</div>
-          </div>
-        </div>
-        <div className="menuitem  px-10 md:px-auto md:pl-8 ">
-            <div className=" flex flex-col items-start text-[6vw] lg:text-[3vw] font-[two] py-2">Espresso </div>
-          <div className="flex items-center justify-between border-b-1 pb-5 ">
-            <div className="sm:text-[1.2vw] text-[2.5vw] font-[two2]  text-left w-[60%]">Lorem ipsum dolor, sit amet consectetur .</div>
-            <div className="lg:text-[2.5vw] text-[5vw] font-[one]">RS - 450/-</div>
-          </div>
-        </div>
-        <div className="menuitem  px-10 md:px-auto md:pl-8 ">
-            <div className=" flex flex-col items-start text-[6vw] lg:text-[3vw] font-[two] py-2">Espresso </div>
-          <div className="flex items-center justify-between  pb-5 ">
-            <div className="sm:text-[1.2vw] text-[2.5vw] font-[two2]  text-left w-[60%]">Lorem ipsum dolor, sit amet consectetur .</div>
-            <div className="lg:text-[2.5vw] text-[5vw] font-[one]">RS - 450/-</div>
-          </div>
-        </div>
-       
-       
-  
-
-        </div>
+      </div>
+    </div>
+  ))}
+</div>
  
         </div>
        

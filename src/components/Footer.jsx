@@ -18,11 +18,8 @@ const  Footer = () => {
       duration: 1.5, 
       delay: 1.5,
     });
-    gsap.to(".bean", {
-      rotate: -180,
-      duration: 1.5,
-      delay: 1.5,
-    });
+
+
     
     })
     //h-[30vh] md:h-[50vh] lg:h-[80vh]

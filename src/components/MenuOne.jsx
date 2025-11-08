@@ -3,8 +3,34 @@ import gsap from "gsap";
 import { useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { SplitText } from 'gsap/all'
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { coldBrew } from "../../constants/constants";
+
+
+ 
 
 const MenuOne = () => {
+
+
+  //  const [coffees, setCoffees] = useState([]);
+
+
+  // useEffect(() => {
+  //   axios
+  //     .get("http://localhost:1337/api/chapter-ones")
+  //     .then(res => {
+  //       console.log("Full API response:", res);
+  //       console.log("Response data only:", res.data);
+  //       console.log("Actual products array:", res.data.data);
+  //       setCoffees(res.data.data);
+  //     })
+  //     .catch(err => console.error("Error:", err));
+  // }, []);
+
+
+
   const boldoneRef = useRef();
   const sectionRef = useRef();
   const imagesRef = useRef([]);
@@ -19,6 +45,33 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 useGSAP(() => {
+
+  const titleSplit = new SplitText('.title', {
+            type:'chars, words'
+        })
+
+gsap.from(titleSplit.chars, {
+  yPercent: 15, // thoda niche se aayein, jyada jump nahi
+  opacity: 0,   // halka fade-in effect
+  duration: 0.8,
+  ease: "power2.out", // smooth aur natural ease
+  stagger: {
+    amount: 0.3, // thoda spread feel
+    from: "start" // left to right reveal
+  },
+  scrollTrigger: {
+    trigger: ".start",
+    start: "top 85%",
+    toggleActions: "restart none none restart"
+,
+    invalidateOnRefresh: true,
+  },
+});
+
+
+
+
+
    gsap.to("#wavePath1", {
       duration: 2,
       repeat: -1,
@@ -135,133 +188,62 @@ useGSAP(() => {
           />
         </svg>
     </div>
-    <div className=" h-auto py-5 justify-center flex items-center bg-[#533116]">
+    <div className=" h-auto py-5 start justify-center flex items-center bg-[#533116]">
       <div className=" bg-[#9b663a] mb-5 h-auto md:mt-15 lg:mt-0 flex  rounded-4xl w-[90%]">
         <div className="lg:w-1/2 w-full h-auto rounded-4xl  text-[#f2e5bc] ">
 
-        <div className="title items-center flex flex-col">
-          <div className="font-[one] text-[12vw] sm:text-[5.5vw] pt-5">COLD BREWS</div>
+        <div className=" items-center flex flex-col">
+          <div className="font-[one] text-[12vw] sm:text-[5.5vw] title pt-5">COLD BREWS</div>
         <div className="font-[two2] text-[3vw] mb-2 sm:mb-0 sm:text-[1.5vw] border-b-1 pb-1 sm:pb-5 ">Served hot, on ice, and blended -- Just let your barista know</div>
         </div>
-        <div className="allitems">
-
-        <div className="menuitem  px-10 md:px-auto md:pl-8 ">
-            <div className=" flex flex-col items-start text-[6vw] lg:text-[3vw] font-[two] py-2">Espresso </div>
-          <div className="flex items-center justify-between border-b-1 pb-5 ">
-            <div className="sm:text-[1.2vw] text-[2.5vw] font-[two2]  text-left w-[60%]">Lorem ipsum dolor, sit amet consectetur .</div>
-            <div className="lg:text-[2.5vw] text-[5vw] font-[one]">RS - 450/-</div>
-          </div>
-        </div>
-        <div className="menuitem  px-10 md:px-auto md:pl-8 ">
-            <div className=" flex flex-col items-start text-[6vw] lg:text-[3vw] font-[two] py-2">Espresso </div>
-          <div className="flex items-center justify-between border-b-1 pb-5 ">
-            <div className="sm:text-[1.2vw] text-[2.5vw] font-[two2]  text-left w-[60%]">Lorem ipsum dolor, sit amet consectetur .</div>
-            <div className="lg:text-[2.5vw] text-[5vw] font-[one]">RS - 450/-</div>
-          </div>
-        </div>
-        <div className="menuitem  px-10 md:px-auto md:pl-8 ">
-            <div className=" flex flex-col items-start text-[6vw] lg:text-[3vw] font-[two] py-2">Espresso </div>
-          <div className="flex items-center justify-between border-b-1 pb-5 ">
-            <div className="sm:text-[1.2vw] text-[2.5vw] font-[two2]  text-left w-[60%]">Lorem ipsum dolor, sit amet consectetur .</div>
-            <div className="lg:text-[2.5vw] text-[5vw] font-[one]">RS - 450/-</div>
-          </div>
-        </div>
-        <div className="menuitem  px-10 md:px-auto md:pl-8 ">
-            <div className=" flex flex-col items-start text-[6vw] lg:text-[3vw] font-[two] py-2">Espresso </div>
-          <div className="flex items-center justify-between border-b-1 pb-5 ">
-            <div className="sm:text-[1.2vw] text-[2.5vw] font-[two2]  text-left w-[60%]">Lorem ipsum dolor, sit amet consectetur .</div>
-            <div className="lg:text-[2.5vw] text-[5vw] font-[one]">RS - 450/-</div>
-          </div>
-        </div>
-        <div className="menuitem  px-10 md:px-auto md:pl-8 ">
-            <div className=" flex flex-col items-start text-[6vw] lg:text-[3vw] font-[two] py-2">Espresso </div>
-          <div className="flex items-center justify-between border-b-1 pb-5 ">
-            <div className="sm:text-[1.2vw] text-[2.5vw] font-[two2]  text-left w-[60%]">Lorem ipsum dolor, sit amet consectetur .</div>
-            <div className="lg:text-[2.5vw] text-[5vw] font-[one]">RS - 450/-</div>
-          </div>
-        </div>
-        <div className="menuitem  px-10 md:px-auto md:pl-8 ">
-            <div className=" flex flex-col items-start text-[6vw] lg:text-[3vw] font-[two] py-2">Espresso </div>
-          <div className="flex items-center justify-between border-b-1 pb-5 ">
-            <div className="sm:text-[1.2vw] text-[2.5vw] font-[two2]  text-left w-[60%]">Lorem ipsum dolor, sit amet consectetur .</div>
-            <div className="lg:text-[2.5vw] text-[5vw] font-[one]">RS - 450/-</div>
-          </div>
-        </div>
-        <div className="menuitem  px-10 md:px-auto md:pl-8 ">
-            <div className=" flex flex-col items-start text-[6vw] lg:text-[3vw] font-[two] py-2">Espresso </div>
-          <div className="flex items-center justify-between border-b-1 pb-5 ">
-            <div className="sm:text-[1.2vw] text-[2.5vw] font-[two2]  text-left w-[60%]">Lorem ipsum dolor, sit amet consectetur .</div>
-            <div className="lg:text-[2.5vw] text-[5vw] font-[one]">RS - 450/-</div>
-          </div>
-        </div>
-        <div className="menuitem  px-10 md:px-auto md:pl-8 ">
-            <div className=" flex flex-col items-start text-[6vw] lg:text-[3vw] font-[two] py-2">Espresso </div>
-          <div className="flex items-center justify-between border-b-1 pb-5 ">
-            <div className="sm:text-[1.2vw] text-[2.5vw] font-[two2]  text-left w-[60%]">Lorem ipsum dolor, sit amet consectetur .</div>
-            <div className="lg:text-[2.5vw] text-[5vw] font-[one]">RS - 450/-</div>
-          </div>
-        </div>
-        <div className="menuitem  px-10 md:px-auto md:pl-8 ">
-            <div className=" flex flex-col items-start text-[6vw] lg:text-[3vw] font-[two] py-2">Espresso </div>
-          <div className="flex items-center justify-between border-b-1 pb-5 ">
-            <div className="sm:text-[1.2vw] text-[2.5vw] font-[two2]  text-left w-[60%]">Lorem ipsum dolor, sit amet consectetur .</div>
-            <div className="lg:text-[2.5vw] text-[5vw] font-[one]">RS - 450/-</div>
-          </div>
-        </div>
-        <div className="menuitem  px-10 md:px-auto md:pl-8 ">
-            <div className=" flex flex-col items-start text-[6vw] lg:text-[3vw] font-[two] py-2">Espresso </div>
-          <div className="flex items-center justify-between border-b-1 pb-5 ">
-            <div className="sm:text-[1.2vw] text-[2.5vw] font-[two2]  text-left w-[60%]">Lorem ipsum dolor, sit amet consectetur .</div>
-            <div className="lg:text-[2.5vw] text-[5vw] font-[one]">RS - 450/-</div>
-          </div>
-        </div>
-        <div className="menuitem  px-10 md:px-auto md:pl-8 ">
-            <div className=" flex flex-col items-start text-[6vw] lg:text-[3vw] font-[two] py-2">Espresso </div>
-          <div className="flex items-center justify-between border-b-1 pb-5 ">
-            <div className="sm:text-[1.2vw] text-[2.5vw] font-[two2]  text-left w-[60%]">Lorem ipsum dolor, sit amet consectetur .</div>
-            <div className="lg:text-[2.5vw] text-[5vw] font-[one]">RS - 450/-</div>
-          </div>
-        </div>
-        <div className="menuitem  px-10 md:px-auto md:pl-8 ">
-            <div className=" flex flex-col items-start text-[6vw] lg:text-[3vw] font-[two] py-2">Espresso </div>
-          <div className="flex items-center justify-between border-b-1 pb-5 ">
-            <div className="sm:text-[1.2vw] text-[2.5vw] font-[two2]  text-left w-[60%]">Lorem ipsum dolor, sit amet consectetur .</div>
-            <div className="lg:text-[2.5vw] text-[5vw] font-[one]">RS - 450/-</div>
-          </div>
-        </div>
-        <div className="menuitem  px-10 md:px-auto md:pl-8 ">
-            <div className=" flex flex-col items-start text-[6vw] lg:text-[3vw] font-[two] py-2">Espresso </div>
-          <div className="flex items-center justify-between border-b-1 pb-5 ">
-            <div className="sm:text-[1.2vw] text-[2.5vw] font-[two2]  text-left w-[60%]">Lorem ipsum dolor, sit amet consectetur .</div>
-            <div className="lg:text-[2.5vw] text-[5vw] font-[one]">RS - 450/-</div>
-          </div>
-        </div>
-        <div className="menuitem  px-10 md:px-auto md:pl-8 ">
-            <div className=" flex flex-col items-start text-[6vw] lg:text-[3vw] font-[two] py-2">Espresso </div>
-          <div className="flex items-center justify-between border-b-1 pb-5 ">
-            <div className="sm:text-[1.2vw] text-[2.5vw] font-[two2]  text-left w-[60%]">Lorem ipsum dolor, sit amet consectetur .</div>
-            <div className="lg:text-[2.5vw] text-[5vw] font-[one]">RS - 450/-</div>
-          </div>
-        </div>
-        <div className="menuitem  px-10 md:px-auto md:pl-8 ">
-            <div className=" flex flex-col items-start text-[6vw] lg:text-[3vw] font-[two] py-2">Espresso </div>
-          <div className="flex items-center justify-between border-b-1 pb-5 ">
-            <div className="sm:text-[1.2vw] text-[2.5vw] font-[two2]  text-left w-[60%]">Lorem ipsum dolor, sit amet consectetur .</div>
-            <div className="lg:text-[2.5vw] text-[5vw] font-[one]">RS - 450/-</div>
-          </div>
-        </div>
-        <div className="menuitem  px-10 md:px-auto md:pl-8 ">
+      
+        {/* <div className="menuitem  px-10 md:px-auto md:pl-8 ">
             <div className=" flex flex-col items-start text-[6vw] lg:text-[3vw] font-[two] py-2">Espresso </div>
           <div className="flex items-center justify-between pb-5 ">
             <div className="sm:text-[1.2vw] text-[2.5vw] font-[two2]  text-left w-[60%]">Lorem ipsum dolor, sit amet consectetur .</div>
             <div className="lg:text-[2.5vw] text-[5vw] font-[one]">RS - 450/-</div>
           </div>
-        </div>
-       
-      
-  
+        </div> */}
 
+        {/* <div className="allitems">
+  {coffees.map((item) => (
+    <div key={item.id} className="menuitem px-10 md:px-auto md:pl-8">
+      <div className="flex flex-col items-start text-[6vw] lg:text-[3vw] font-[two] py-2">
+        {item.title}
+      </div>
+      <div className="flex items-center justify-between border-b-1 pb-5">
+        <div className="sm:text-[1.2vw] text-[2.5vw] font-[two2] text-left w-[60%]">
+          {item.description}
         </div>
+        <div className="lg:text-[2.5vw] text-[5vw] font-[one]">
+          RS - {item.price}/-
+        </div>
+      </div>
+    </div>
+  ))}
+</div> */}
+
+
+<div className="allitems">
+  {coldBrew.map((item) => (
+    <div key={item.id} className="menuitem px-10 md:px-auto md:pl-8">
+      <div className="flex flex-col items-start text-[6vw] lg:text-[3vw] font-[two] py-2">
+        {item.name}
+      </div>
+      <div className="flex items-center justify-between border-b-1 pb-5">
+        <div className="sm:text-[1.2vw] text-[2.5vw] font-[two2] text-left w-[60%]">
+          {item.description}
+        </div>
+        <div className="lg:text-[2.5vw] text-[5vw] font-[one]">
+          RS - {item.price}/-
+        </div>
+      </div>
+    </div>
+  ))}
+</div>
+
+
+
         </div>
        
            <div className="w-1/2 hidden lg:block h-full rounded-4xl relative">
