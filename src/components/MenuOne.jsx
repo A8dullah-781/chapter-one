@@ -63,7 +63,7 @@ gsap.from(titleSplit.chars, {
   scrollTrigger: {
     trigger: ".start",
     start: "top 85%",
-    toggleActions: "restart none none restart",
+    toggleActions: "play none none restart",
     invalidateOnRefresh: true,
   },
 });

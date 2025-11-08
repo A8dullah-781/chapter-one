@@ -151,7 +151,7 @@ mm.add("(min-width: 700px) and (max-width: 1900px)", () => {
           <div className="text-[12vw] lg:text-[8vw] ">CHAPTER</div>
           <div className="flex one lg:-mt-5 -mt-2 ">
             <img
-              className="md:w-[8vw] w-[10.5vw] md:h-[11vw] lg:h-[8vw] h-[5.5vh] bean lg:-mr-1 text-[#533116]"
+              className="md:w-[8vw] lg:w-[7vw] w-[10.5vw] md:h-[11vw] lg:h-[7.5vw] h-[5.5vh] bean lg:-mr-1 text-[#533116]"
               src="/images/bean.png"
               alt=""
             />
