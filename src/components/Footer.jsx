@@ -76,25 +76,22 @@ const  Footer = () => {
         >
           +92 329 0021164
         </a>
-     <div className="group relative inline-block overflow-hidden h-[1.5em]">
- 
-  <span
-    className="block transform transition-all duration-500 group-hover:-translate-y-full"
-  >
-    CREDIT
-  </span>
-
-  {/* Hover text */}
+     <div className="relative inline-block overflow-hidden h-[1.5em]">
   <a
     href="https://www.linkedin.com/in/abdullah-farooq1/"
     target="_blank"
     rel="noopener noreferrer"
-    className="block absolute left-0 top-full transform transition-all duration-500 group-hover:top-0 text-[#f2e5bc] "
-    style={{ zIndex: 1, position: "absolute", pointerEvents: "auto" }}
+    className="block group relative overflow-hidden h-[1.5em] text-[#fff]"
   >
-    A8dullah
+    <span className="block transform transition-all duration-500 group-hover:-translate-y-full">
+      CREDIT
+    </span>
+    <span className="block absolute left-0 top-full transform transition-all duration-500 group-hover:top-0 text-[#f2e5bc]">
+      A8dullah
+    </span>
   </a>
 </div>
+
           </ul>
         
         </div>
