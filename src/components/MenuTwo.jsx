@@ -208,23 +208,25 @@ const titles = gsap.utils.toArray(".title");
 titles.forEach(title => {
   const split = new SplitText(title, { type: "chars" });
 
-  gsap.from(split.chars, {
-    yPercent: 20,           // thoda neeche se aayein
-    opacity: 0,             // halka fade-in
-    duration: 0.8,          // fast but smooth
-    ease: "power2.out",     // no bounce, natural motion
-    stagger: {
-      amount: 0.4,          // pure word reveal timing
-      from: "start"         // left to right reveal
-    },
-    scrollTrigger: {
-      trigger: title,
-      start: "top 85%",     // jab title viewport me aaye tab
-      toggleActions: "restart none none restart",
+ gsap.from(split.chars, {
+  y: -10,             // upar se girna start
+  rotation: -10,       // thoda twist girte waqt
+  opacity: 0,          // fade-in effect
+  duration: 1,         // thoda slow for bounce feel
+  ease: "bounce.out",  // girte settle hone ka effect
+  stagger: {
+    each: 0.05,        // har letter sequentially
+    from: "start",     // left to right
+  },
+  scrollTrigger: {
+    trigger: title,
+    start: "top 85%",  
+    toggleActions: "restart none none restart",
+    invalidateOnRefresh: true,
+  }
+});
 
-      invalidateOnRefresh: true,
-    }
-  });
+
 });
 
 
@@ -249,12 +251,12 @@ titles.forEach(title => {
 
          <div className="allitems">
   {matcha.map((item) => (
-    <div key={item.id} className="menuitem px-10 md:px-auto md:pl-8">
+    <div key={item.id} className="menuitem px-4 md:px-auto md:pl-8">
       <div className="flex flex-col items-start text-[6vw] lg:text-[3vw] font-[two] py-2">
         {item.name}
       </div>
       <div className="flex items-center justify-between border-b-1 pb-5">
-        <div className="sm:text-[1.2vw] text-[2.5vw] font-[two2] text-left w-[60%]">
+        <div className="sm:text-[1.2vw] text-[4vw] font-[two2] text-left w-[60%]">
           {item.description}
         </div>
         <div className="lg:text-[2.5vw] text-[5vw] font-[one]">
@@ -272,12 +274,12 @@ titles.forEach(title => {
 
           <div className="allitems">
   {frappe.map((item) => (
-    <div key={item.id} className="menuitem px-10 md:px-auto md:pl-8">
+    <div key={item.id} className="menuitem px-4 md:px-auto md:pl-8">
       <div className="flex flex-col items-start text-[6vw] lg:text-[3vw] font-[two] py-2">
         {item.name}
       </div>
       <div className="flex items-center justify-between border-b-1 pb-5">
-        <div className="sm:text-[1.2vw] text-[2.5vw] font-[two2] text-left w-[60%]">
+        <div className="sm:text-[1.2vw] text-[4vw] font-[two2] text-left w-[60%]">
           {item.description}
         </div>
         <div className="lg:text-[2.5vw] text-[5vw] font-[one]">
@@ -295,14 +297,18 @@ titles.forEach(title => {
         </div>
 
 
-   <div className="allitems">
-  {chillers.map((item) => (
-    <div key={item.id} className="menuitem px-10 md:px-auto md:pl-8">
+<div className="allitems">
+  {chillers.map((item, index) => (
+    <div key={item.id} className="menuitem px-4 md:px-auto md:pl-8">
       <div className="flex flex-col items-start text-[6vw] lg:text-[3vw] font-[two] py-2">
         {item.name}
       </div>
-      <div className="flex items-center justify-between border-b-1 pb-5">
-        <div className="sm:text-[1.2vw] text-[2.5vw] font-[two2] text-left w-[60%]">
+      <div
+        className={`flex items-center justify-between border-b pb-5 ${
+          index === chillers.length - 1 ? "border-b-0" : "border-b"
+        }`}
+      >
+        <div className="sm:text-[1.2vw] text-[4vw] font-[two2] text-left w-[60%]">
           {item.description}
         </div>
         <div className="lg:text-[2.5vw] text-[5vw] font-[one]">

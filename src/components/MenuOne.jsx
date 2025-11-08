@@ -51,24 +51,22 @@ useGSAP(() => {
         })
 
 gsap.from(titleSplit.chars, {
-  yPercent: 15, // thoda niche se aayein, jyada jump nahi
-  opacity: 0,   // halka fade-in effect
-  duration: 0.8,
-  ease: "power2.out", // smooth aur natural ease
+  y: -10,             // upar se girna start (match first one)
+  rotation: -10,       // thoda twist girte waqt
+  opacity: 0,
+  duration: 1,         // same as first for consistency
+  ease: "bounce.out",  // classic girte settle hone ka effect
   stagger: {
-    amount: 0.3, // thoda spread feel
-    from: "start" // left to right reveal
+    each: 0.05,        // match first one
+    from: "start",
   },
   scrollTrigger: {
     trigger: ".start",
     start: "top 85%",
-    toggleActions: "restart none none restart"
-,
+    toggleActions: "restart none none restart",
     invalidateOnRefresh: true,
   },
 });
-
-
 
 
 
@@ -193,7 +191,7 @@ gsap.from(titleSplit.chars, {
         <div className="lg:w-1/2 w-full h-auto rounded-4xl  text-[#f2e5bc] ">
 
         <div className=" items-center flex flex-col">
-          <div className="font-[one] text-[12vw] sm:text-[5.5vw] title pt-5">COLD BREWS</div>
+          <div className="font-[one] text-[11vw] sm:text-[5.5vw] title pt-5">COLD BREWS</div>
         <div className="font-[two2] text-[3vw] mb-2 sm:mb-0 sm:text-[1.5vw] border-b-1 pb-1 sm:pb-5 ">Served hot, on ice, and blended -- Just let your barista know</div>
         </div>
       
@@ -223,15 +221,18 @@ gsap.from(titleSplit.chars, {
   ))}
 </div> */}
 
-
 <div className="allitems">
-  {coldBrew.map((item) => (
-    <div key={item.id} className="menuitem px-10 md:px-auto md:pl-8">
+  {coldBrew.map((item, index) => (
+    <div key={item.id} className="menuitem px-4 md:px-auto md:pl-8">
       <div className="flex flex-col items-start text-[6vw] lg:text-[3vw] font-[two] py-2">
         {item.name}
       </div>
-      <div className="flex items-center justify-between border-b-1 pb-5">
-        <div className="sm:text-[1.2vw] text-[2.5vw] font-[two2] text-left w-[60%]">
+      <div
+        className={`flex items-center justify-between border-b pb-5 ${
+          index === coldBrew.length - 1 ? "border-b-0" : "border-b"
+        }`}
+      >
+        <div className="sm:text-[1.2vw] text-[4vw] font-[two2] text-left w-[60%]">
           {item.description}
         </div>
         <div className="lg:text-[2.5vw] text-[5vw] font-[one]">
@@ -241,6 +242,8 @@ gsap.from(titleSplit.chars, {
     </div>
   ))}
 </div>
+
+
 
 
 

@@ -15,3 +15,19 @@ body{
     font-family: "two2";
     src: url("/fonts/lapiok.woff2") format("truetype");
 }
+
+/* global.css ya component ke style me add karo */
+::-webkit-scrollbar {
+  width: 4px;          /* scrollbar width */
+}
+
+::-webkit-scrollbar-track {
+  background: #212121;  /* track ka color */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f6f5f0;  /* thumb ka color */
+  border-radius: 10px;
+  border: 2px solid #f2e5bc; /* padding effect */
+}

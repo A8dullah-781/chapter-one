@@ -81,7 +81,7 @@ const  Footer = () => {
     href="https://www.linkedin.com/in/abdullah-farooq1/"
     target="_blank"
     rel="noopener noreferrer"
-    className="block group relative overflow-hidden h-[1.5em] text-[#fff]"
+    className="block group relative overflow-hidden h-[1.5em] text-[#f2e5bc]"
   >
     <span className="block transform transition-all duration-500 group-hover:-translate-y-full">
       CREDIT

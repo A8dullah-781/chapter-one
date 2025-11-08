@@ -121,7 +121,7 @@ mm.add("(min-width: 700px) and (max-width: 1900px)", () => {
   
 
   return (
-    <div className=" h-screen w-screen">
+    <div className=" h-screen bg-[#f6f5f0] w-screen">
 
 
       <div className="nav font-[two2] text-[#784b29]  flex justify-between items-center lg:px-10 px-10 py-3 text-[3vw] lg:text-[1.7vw]">
