@@ -27,7 +27,12 @@ body{
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #f6f5f0;  /* thumb ka color */
+  background: #212112;  /* thumb ka color */
   border-radius: 10px;
-  border: 2px solid #f2e5bc; /* padding effect */
+  border: 2px solid #212121; /* padding effect */
+}
+
+
+body{
+  overflow-x: hidden;
 }

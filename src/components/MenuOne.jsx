@@ -157,13 +157,13 @@ gsap.from(titleSplit.chars, {
 
   
   
-  return ( <div>
-    <div className="relative  w-full lg:hidden">
+  return ( <div className="relative  z-50">
+    <div className="relative  w-full   ">
             <svg
           ref={layerRef}
           viewBox="0 0 1200 120"
           preserveAspectRatio="none"
-          className="absolute lehar bottom-0 left-0 w-full sm:h-[37vh] md:h-[25vh] h-[10vh] "
+          className="absolute lehar bottom-0 left-0 w-full sm:h-[37vh] md:h-[13vh] lg:h-[16vh] h-[10vh] "
         >
           <path
             id="wavePath1"
@@ -176,7 +176,7 @@ gsap.from(titleSplit.chars, {
           ref={layerReff}
           viewBox="0 0 1200 120"
           preserveAspectRatio="none"
-          className="absolute lehar bottom-0 left-0 w-full sm:h-[32vh] md:h-[20vh] h-[7vh] "
+          className="absolute lehar bottom-0 left-0 w-full sm:h-[32vh] md:h-[10vh] -mb-1 lg:h-[12vh] h-[7vh] "
         >
           <path
             id="wavePath2"
@@ -186,12 +186,12 @@ gsap.from(titleSplit.chars, {
           />
         </svg>
     </div>
-    <div className=" h-auto py-5 start justify-center flex items-center bg-[#533116]">
-      <div className=" bg-[#9b663a] mb-5 h-auto md:mt-15 lg:mt-0 flex  rounded-4xl w-[90%]">
+    <div className=" h-auto py-5 start justify-center z-50 flex items-center bg-[#533116]">
+      <div className=" bg-[#9b663a] mb-5 h-auto md:mt-2 lg:mt-0 flex  rounded-4xl w-[90%]">
         <div className="lg:w-1/2 w-full h-auto rounded-4xl  text-[#f2e5bc] ">
 
         <div className=" items-center flex flex-col">
-          <div className="font-[one] text-[11vw] sm:text-[5.5vw] title pt-5">COLD BREWS</div>
+          <div className="font-[one] text-[11vw] md:text-[10vw] lg:text-[5.5vw] sm:text-[5.5vw] title pt-5">COLD BREWS</div>
         <div className="font-[two2] text-[3vw] mb-2 sm:mb-0 sm:text-[1.5vw] border-b-1 pb-1 sm:pb-5 ">Served hot, on ice, and blended -- Just let your barista know</div>
         </div>
       

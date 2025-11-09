@@ -60,7 +60,8 @@ const App = () => {
         </div>
       </div>
       <Home />
-      <Blank />
+      {/* <Blank /> test comment */ } 
+      
       <MenuOne />
       <MenuTwo/>
       <About/>

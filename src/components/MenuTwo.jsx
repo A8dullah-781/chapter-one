@@ -238,14 +238,14 @@ titles.forEach(title => {
 
   
   
-  return ( <div>
+  return ( <div classname='overflow-x-hidden'>
     
     <div className=" h-auto justify-center  relative flex z-10 items-center bg-[#533116]">
       <div className="bg-[#bed9eb] mb-5 start h-auto flex mt-10 sm:mt-0 rounded-4xl w-[90%]">
         <div className="lg:w-1/2 w-full h-auto rounded-4xl  text-[#9b663a] "> <div></div>
 
         <div className=" items-center  flex flex-col">
-          <div className="font-[one] title text-[9vw] sm:text-[4vw] whitespace-none  border-b-1 pb-1 sm:pb-5  pt-5">MATCHA BLENDS</div>
+          <div className="font-[one] title text-[9vw]  md:text-[8vw] lg:text-[4.5vw]  sm:text-[4vw] whitespace-none  border-b-1 pb-1 sm:pb-5  pt-5">MATCHA BLENDS</div>
        
         </div>
 
@@ -268,7 +268,7 @@ titles.forEach(title => {
 </div>
       
     <div className=" items-center flex flex-col">
-          <div className="font-[one]  title text-[9vw] sm:text-[4vw] whitespace-none  border-b-1 pb-1 sm:pb-5  pt-5">BARISTA'S PICK</div>
+          <div className="font-[one]  md:text-[8vw] lg:text-[4.5vw]  title text-[9vw] sm:text-[4vw] whitespace-none  border-b-1 pb-1 sm:pb-5  pt-5">BARISTA'S PICK</div>
        
         </div>
 
@@ -291,7 +291,7 @@ titles.forEach(title => {
 </div>
 
   <div className="title items-center flex flex-col">
-          <div className="font-[one] text-[8vw] title sm:text-[4vw] px-5 pt-5">FROSTED BLENDS</div>
+          <div className="font-[one] text-[8vw] title  md:text-[8vw] lg:text-[4vw]  sm:text-[4vw] px-5 pt-5">FROSTED BLENDS</div>
         <div className="font-[two2] text-[2.5vw] mb-2 sm:mb-0 sm:text-[1.5vw] ">*These drinks are caffiene-free</div>
         <div className="w-[90%] border-b-1 pb-1 sm:pb-5"></div>
         </div>

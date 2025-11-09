@@ -4,5 +4,10 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [ tailwindcss(),react()],
+  plugins: [
+    tailwindcss({
+      config: './tailwind.config.js', // custom config ka path
+    }),
+    react(),
+  ],
 })
