@@ -60,12 +60,13 @@ gsap.from(titleSplit.chars, {
     each: 0.05,        // match first one
     from: "start",
   },
-  scrollTrigger: {
-    trigger: ".start",
-    start: "top 85%",
-    toggleActions: "play none none restart",
-    invalidateOnRefresh: true,
-  },
+ teOnRefresh: true,
+scrollTrigger: {
+  trigger: ".start",
+  start: "top 85%",
+  toggleActions: "play none none none", // "restart" hatao
+  once: true, // animation sirf ek baar chale
+},
 });
 
 

@@ -20,7 +20,7 @@ const App = () => {
       el: document.querySelector('.main'),
       smooth: true,
       multiplier: 1,
-      lerp: 3
+      lerp: 0.2
     });
 
     return () => {
